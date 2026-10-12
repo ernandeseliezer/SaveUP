@@ -1,10 +1,15 @@
 package com.example.saveUP.dto;
 
-import com.example.saveUP.entities.User;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-public record UserResponseDTO(Integer userId, String name, String email) {
+@Getter
+@Setter
+@NoArgsConstructor
+public class UserResponseDTO {
 
-    public UserResponseDTO(User user) {
-        this(user.getUserId(), user.getName(), user.getEmail());
-    }
+    private Integer userId;
+    private String name;
+    private String email;
 }

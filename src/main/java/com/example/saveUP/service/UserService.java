@@ -24,7 +24,7 @@ public class UserService implements UserServiceInterface {
 
     public UserResponseDTO createUser(UserRequestDTO data) {
         User newUser = modelMapper.map(data, User.class);
-        newUser.setSenha(passwordEncoder.encode(data.senha()));
+        newUser.setSenha(passwordEncoder.encode(data.getSenha()));
         return modelMapper.map(userRepository.save(newUser), UserResponseDTO.class);
     }
 
