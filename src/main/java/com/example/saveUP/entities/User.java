@@ -14,6 +14,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "usuario")
 @Getter
+@Setter
 @NoArgsConstructor
 public class User {
 
@@ -28,11 +29,9 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Setter
     @Column(nullable = false)
     private String senha;
 
-    @Setter
     @Column(precision = 10, scale = 2)
     private BigDecimal valorMedio;
 

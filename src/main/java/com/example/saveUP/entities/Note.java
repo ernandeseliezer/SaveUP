@@ -21,6 +21,7 @@ import lombok.Setter;
 @Table(name = "nota")
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor
 public class Note {
 
@@ -36,15 +37,12 @@ public class Note {
     private LocalDate dataMes;
 
     @Column
-    @Setter
     private String tipoDespesa;
 
     @Column
-    @Setter
     private boolean ehNecessario;
 
     @Column
-    @Setter
     private String descricao;
 
     @ManyToOne
